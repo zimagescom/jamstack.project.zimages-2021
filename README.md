@@ -1,5 +1,7 @@
 # Jeu Zimages 2020
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/998c7a50-94c8-41d1-9ff9-b3cb547fe7c1/deploy-status)](https://app.netlify.com/sites/gaming-zimages/deploys)
+
 ## Build Setup
 
 ```bash
