@@ -15,7 +15,7 @@
                 class="mt-2 text-xs font-medium focus:outline-none focus:shadow-outline-purple" type="button">Conditions
                 de participation
             </button>
-            <div class="absolute transform translate-y-5 bottom-0 right-0 text-white">
+            <div class="pointer-events-none absolute transform translate-y-5 bottom-0 right-0 text-white">
                 <Astronaute />
             </div>
         </div>
