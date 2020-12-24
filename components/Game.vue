@@ -29,7 +29,7 @@
 export default {
     name: "flappy-bird",
     data: () => ({
-        src: "http://zimagescom.github.io/clumsy-bird/",
+        src: "https://zimagescom.github.io/clumsy-bird/",
         iframe: null,
     }),
     methods: {
