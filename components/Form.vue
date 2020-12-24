@@ -6,7 +6,7 @@
             Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
         </div>
 
-        <form name="jeu-concours" action="/merci/" method="POST" netlify class="max-w-3xl m-auto flex flex-col space-y-6">
+        <form name="jeu-concours" action="/merci/" method="POST" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" class="max-w-3xl m-auto flex flex-col space-y-6">
             <input type="hidden" name="form-name" value="jeu-concours" />
             <div>
                 <label class="text-sm ml-2" for="name">Prénom et Nom</label>
@@ -18,7 +18,7 @@
             </div>
             <div>
                 <label class="text-sm ml-2" for="score">Photo de mon super giga méga score</label>
-                <input type="file" name="score" id="score" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
+                <input ref="file" type="file" name="score" id="score" @change="addFile()" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
                 <input type="checkbox" name="accept_terms" id="accept_terms" required class="shadow border-none form-checkbox text-xl mr-2 bg-white focus:shadow-outline-pink focus:border-pink" />
@@ -31,4 +31,62 @@
         </form>
     </div>
 </template>
+
+<script>
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+            name: "",
+            file: null,
+        };
+    },
+    computed: {
+        form() {
+            return {
+                name: this.name,
+                attach: this.file,
+            };
+        },
+    },
+    methods: {
+        addFile() {
+            this.file = this.$refs.file.files[0];
+        },
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    (key) =>
+                        `${encodeURIComponent(key)}=${encodeURIComponent(
+                            data[key]
+                        )}`
+                )
+                .join("&");
+        },
+        handleSubmit() {
+            const self = this;
+
+            const axiosConfig = {
+                header: { "Content-Type": "multipart/form-data" },
+            };
+            axios
+                .post(
+                    "/merci/",
+                    self.encode({
+                        "form-name": "jeu-concours",
+                        ...self.form,
+                    }),
+                    axiosConfig
+                )
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+    },
+};
+</script>
 
