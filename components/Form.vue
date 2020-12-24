@@ -5,7 +5,7 @@
             Merci pour ta participation au jeu qui te permettra de gagner la <span class="bg-pink-100 text-pink-400 rounded-full px-3 py-1">1ère borne arcade ZIMAGES</span> ! <br />
             Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
         </div>
-        <form post="/" class="max-w-3xl m-auto flex flex-col space-y-6" name="contact" method="POST" netlify>
+        <form action="/" class="max-w-3xl m-auto flex flex-col space-y-6" name="contact" method="POST" netlify>
             <div>
                 <label class="text-sm ml-2" for="name">Prénom et Nom</label>
                 <input class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" type="text" name="name" id="email"/>
