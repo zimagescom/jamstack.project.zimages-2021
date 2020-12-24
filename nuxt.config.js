@@ -4,7 +4,7 @@ export default {
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: '2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages',
+        title: '2021 pas de Game Over, juste du fun et du bonheur !',
         meta: [{
                 charset: 'utf-8'
             },

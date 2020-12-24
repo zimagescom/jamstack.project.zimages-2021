@@ -11,8 +11,7 @@
 export default {
     data() {
         return {
-            title:
-                "2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages",
+            title: "2021 pas de Game Over, juste du fun et du bonheur !",
             description:
                 "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
             image: require(`~/assets/images/opengraph.jpg`),
@@ -26,7 +25,7 @@ export default {
                     hid: "twitter:title",
                     name: "twitter:title",
                     content:
-                        "2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages",
+                        "2021 pas de Game Over, juste du fun et du bonheur !",
                 },
                 {
                     hid: "twitter:description",
@@ -43,13 +42,13 @@ export default {
                     hid: "twitter:image:alt",
                     name: "twitter:image:alt",
                     content:
-                        "2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages",
+                        "2021 pas de Game Over, juste du fun et du bonheur !",
                 },
                 {
                     hid: "og:title",
                     property: "og:title",
                     content:
-                        "2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages",
+                        "2021 pas de Game Over, juste du fun et du bonheur !",
                 },
                 {
                     hid: "og:description",
@@ -71,7 +70,7 @@ export default {
                     hid: "og:image:alt",
                     property: "og:image:alt",
                     content:
-                        "2021 pas de Game Over, juste du fun et du bonheur ! • Agence Zimages",
+                        "2021 pas de Game Over, juste du fun et du bonheur !",
                 },
             ],
         };
