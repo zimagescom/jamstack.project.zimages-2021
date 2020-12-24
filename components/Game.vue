@@ -1,6 +1,6 @@
 <template>
     <div class="game-wrapper relative flex justify-center items-center m-auto bg-white shadow-2xl p-2 my-8 overflow-hidden">
-        <vue-iframe :src="src" frame-id="flappy-bird" @load="onLoad" name="flappy-bird"
+        <vue-iframe class="w-full h-full" :src="src" frame-id="flappy-bird" @load="onLoad" name="flappy-bird"
             width="100%" height="100%" />
     </div>
 </template>
