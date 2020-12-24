@@ -5,21 +5,25 @@
             Merci pour ta participation au jeu qui te permettra de gagner la <span class="bg-pink-100 text-pink-400 rounded-full px-3 py-1">1ère borne arcade ZIMAGES</span> ! <br />
             Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
         </div>
-        <form action="/" class="max-w-3xl m-auto flex flex-col space-y-6" name="contact" method="POST" netlify>
+
+        <form name="jeu-concours" method="post" netlify netlify-honeypot @submit.prevent="handleSubmit" enctype="multipart/form-data" class="max-w-3xl m-auto flex flex-col space-y-6">
+
+            <input type="hidden" name="form-name" value="jeu-concours" />
+
             <div>
                 <label class="text-sm ml-2" for="name">Prénom et Nom</label>
-                <input class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" type="text" name="name" id="email"/>
+                <input type="text" name="name" id="name" @input="event => form.name = event.target.value" required class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
                 <label class="text-sm ml-2" for="email">Adresse e-mail</label>
-                <input class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" type="email" name="email" id="email" />
+                <input  type="email" name="email" id="email" @input="event => form.email = event.target.value" required class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
                 <label class="text-sm ml-2" for="score">Photo de mon super giga méga score</label>
-                <input class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" type="file" name="score" id="score" />
+                <input ref="file" @change="addFile()" type="file" name="score" id="score" required class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
-                <input class="shadow border-none form-checkbox text-xl mr-2 bg-white focus:shadow-outline-pink focus:border-pink" type="checkbox" name="accept_terms" id="accept_terms" />
+                <input type="checkbox" name="accept_terms" id="accept_terms" required class="shadow border-none form-checkbox text-xl mr-2 bg-white focus:shadow-outline-pink focus:border-pink" />
                 <label for="accept_terms">En cochant cette case, j'accepte que ZIMAGES utilise mes données pour me contacter</label>
             </div>
             <div>
@@ -29,3 +33,58 @@
         </form>
     </div>
 </template>
+
+<script>
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+            form: {
+                name: "",
+                file: "",
+            },
+        };
+    },
+    methods: {
+        addFile() {
+            this.form.file = this.$refs.file.files[0];
+        },
+        encode(data) {
+            const formData = new FormData();
+
+            for (const key of Object.keys(data)) {
+                formData.append(key, data[key]);
+            }
+
+            return formData;
+        },
+        handleSubmit() {
+            const data = {
+                "form-name": "jeu-concours",
+                name: this.form.name,
+                attach: this.form.attach,
+            };
+            const axiosConfig = {
+                header: {
+                    "Content-Type": "multipart/form-data",
+                },
+            };
+            axios
+                .post(
+                    "/",
+                    this.encode({
+                        data,
+                    }),
+                    axiosConfig
+                )
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+    },
+};
+</script>
