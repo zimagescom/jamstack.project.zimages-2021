@@ -16,6 +16,9 @@ module.exports = {
             },
         }),
         extend: {
+            fontFamily: {
+                'sans': ['Montserrat', ...fontFamily.sans],
+            },
             colors: {
                 transparent: 'transparent',
                 current: 'currentColor',
@@ -43,9 +46,6 @@ module.exports = {
                     "800": "#6a1039",
                     "900": "#2c0718"
                 },
-            },
-            fontFamily: {
-                sans: ['Monserrat', ...fontFamily.sans]
             },
             boxShadow: {
                 'outline-pink': '0 0 0 3px rgba(233, 109, 165, 0.5)',
