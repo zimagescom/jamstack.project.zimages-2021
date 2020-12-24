@@ -6,7 +6,7 @@
             Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
         </div>
 
-        <form name="jeu-concours" action="/pages/merci/" method="post" netlify class="max-w-3xl m-auto flex flex-col space-y-6">
+        <form name="jeu-concours" action="/merci/" method="post" netlify class="max-w-3xl m-auto flex flex-col space-y-6">
             <input type="hidden" name="form-name" value="jeu-concours" />
             <div>
                 <label class="text-sm ml-2" for="name">Prénom et Nom</label>
@@ -25,7 +25,7 @@
                 <label for="accept_terms">En cochant cette case, j'accepte que ZIMAGES utilise mes données pour me contacter</label>
             </div>
             <div>
-                <input type="submit" class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl text-white shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink">Envoyer</input>
+                <input type="submit" class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl text-white shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink" />
             </div>
             <div class="text-xs text-pink-400">*Champs obligatoires</div>
         </form>
