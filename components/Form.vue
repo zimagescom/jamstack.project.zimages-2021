@@ -72,7 +72,7 @@ export default {
             };
             axios
                 .post(
-                    "/",
+                    "/merci",
                     this.encode({
                         data,
                     }),
