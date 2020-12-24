@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>
+        <div class="relative">
             <div>
                 <Brand class="w-48 mt-10 mb-4" />
             </div>
@@ -11,9 +11,13 @@
                 E-mail : <a href="mailto:zimages@zimages.fr"
                     class="hover:underline focus:outline-none focus:shadow-outline-purple">zimages@zimages.fr</a><br />
             </address>
-            <button @click="showTerms=true" class="mt-2 text-xs font-medium focus:outline-none focus:shadow-outline-purple" type="button">Conditions
+            <button @click="showTerms=true"
+                class="mt-2 text-xs font-medium focus:outline-none focus:shadow-outline-purple" type="button">Conditions
                 de participation
-                </button>
+            </button>
+            <div class="absolute transform translate-y-5 bottom-0 right-0 text-white">
+                <Astronaute />
+            </div>
         </div>
         <Modal :content="'terms'" v-if="showTerms" @close="showTerms = false" />
     </div>
