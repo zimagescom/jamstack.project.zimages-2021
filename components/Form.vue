@@ -10,11 +10,11 @@
             <input type="hidden" name="form-name" value="jeu-concours" />
             <div>
                 <label class="text-sm ml-2" for="name">Prénom et Nom</label>
-                <input type="text" name="name" id="name" @input="event => form.name = event.target.value" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
+                <input type="text" name="name" id="name" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
                 <label class="text-sm ml-2" for="email">Adresse e-mail</label>
-                <input  type="email" name="email" id="email" @input="event => form.email = event.target.value" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
+                <input  type="email" name="email" id="email" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
                 <label class="text-sm ml-2" for="score">Photo de mon super giga méga score</label>
@@ -25,7 +25,7 @@
                 <label for="accept_terms">En cochant cette case, j'accepte que ZIMAGES utilise mes données pour me contacter</label>
             </div>
             <div>
-                <input class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl text-white shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink" type="submit">Envoyer</input>
+                <input type="submit" class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl text-white shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink">Envoyer</input>
             </div>
             <div class="text-xs text-pink-400">*Champs obligatoires</div>
         </form>
@@ -33,17 +33,7 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
-    data() {
-        return {
-            form: {
-                name: "",
-                file: "",
-            },
-        };
-    },
     methods: {
         addFile() {
             this.form.file = this.$refs.file.files[0];
