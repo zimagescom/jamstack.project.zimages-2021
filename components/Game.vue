@@ -1,15 +1,15 @@
 <template>
     <div>
-        <div class="relative flex bg-white shadow-2xl p-2 my-8 overflow-hidden">
+        <div class="relative flex bg-white shadow-2xl p-2 my-8 rounded-3xl overflow-hidden">
 
-            <div style="height:600px;" class="w-full bg-black">
+            <div style="height:600px;" class="w-full bg-black rounded-3xl">
             <vue-iframe
             :src="src"
             frame-id="flappy-bird"
             @load="onLoad"
             name="flappy-bird"
-            width="900px"
-            height="600px" />
+            width="100%"
+            height="100%" />
             </div>
             <!-- <div
                 class="group cursor-pointer absolute inset-0 bg-black bg-opacity-50 shadow-xl m-2 flex flex-col justify-center items-center font-bold uppercase text-2xl">
@@ -29,7 +29,7 @@
 export default {
     name: "flappy-bird",
     data: () => ({
-        src: "https://zimagescom.github.io/clumsy-bird/",
+        src: "http://zimagescom.github.io/clumsy-bird/",
         iframe: null,
     }),
     methods: {
