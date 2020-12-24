@@ -6,6 +6,7 @@
             <div>Whhhaaaooo, mais quel score !! </div>
             <div>Merci de votre participation !</div>
             <div>La Team ZIMAGES </div>
+            <nuxt-link to="/"></nuxt-link>
             <Footer />
         </div>
     </div>
