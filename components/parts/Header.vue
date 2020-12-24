@@ -14,7 +14,9 @@
             </div>
         </div>
         <div>
-            <Arcade class="w-40" />
+            <NuxtLink to="/">
+                <Arcade class="w-40" />
+            </NuxtLink>
         </div>
         <div class="leading-5">
             <span class="font-light">
