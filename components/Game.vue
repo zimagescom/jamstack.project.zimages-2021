@@ -9,7 +9,7 @@
             @load="onLoad"
             name="flappy-bird"
             width="900px"
-            height="670px" />
+            height="600px" />
             </div>
             <!-- <div
                 class="group cursor-pointer absolute inset-0 bg-black bg-opacity-50 shadow-xl m-2 flex flex-col justify-center items-center font-bold uppercase text-2xl">
