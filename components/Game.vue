@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="relative flex bg-white shadow-2xl p-2 my-8 rounded-3xl overflow-hidden">
+        <div class="relative flex bg-white shadow-2xl p-2 my-8 overflow-hidden">
 
             <div style="height:600px;" class="w-full bg-black">
             <vue-iframe
@@ -29,7 +29,7 @@
 export default {
     name: "flappy-bird",
     data: () => ({
-        src: "http://zimagescom.github.io/clumsy-bird/",
+        src: "https://zimagescom.github.io/clumsy-bird/",
         iframe: null,
     }),
     methods: {
