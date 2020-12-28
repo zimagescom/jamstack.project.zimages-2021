@@ -21,6 +21,10 @@ export default {
         iframe: null,
         showForm: false,
     }),
+
+    asyncData({ route, params }) {
+        this.showForm = params.showForm;
+    },
     methods: {
         onLoad(frame) {
             this.iframe = frame.contentWindow;

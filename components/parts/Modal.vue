@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute inset-0 flex justify-center items-center">
+    <div ref="modal" class="absolute inset-0 flex justify-center items-center">
         <div class="fixed z-10 inset-0 bg-black bg-opacity-50 backdrop-blur" @click="$emit('close')"></div>
         <div class="w-full h-full sm:w-auto sm:h-auto relative z-20 container shadow-xl bg-white rounded-xl p-4">
         <svg @click="$emit('close')" class="w-8 h-8 mt-4 mr-4 absolute top-0 right-0 text-pink-200 bg-pink-500 rounded-full shadow-xl cursor-pointer transform transition duration-100 hover:scale-110 hover:bg-pink-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
