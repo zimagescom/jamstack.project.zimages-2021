@@ -1,7 +1,7 @@
 <template>
     <div class="absolute inset-0 flex justify-center items-center">
         <div class="fixed z-10 inset-0 bg-black bg-opacity-50 backdrop-blur" @click="$emit('close')"></div>
-        <div class="relative z-20 container shadow-xl bg-white rounded-xl p-4">
+        <div class="w-full h-full sm:w-auto sm:h-auto relative z-20 container shadow-xl bg-white rounded-xl p-4">
         <svg @click="$emit('close')" class="w-8 h-8 mt-4 mr-4 absolute top-0 right-0 text-pink-200 bg-pink-500 rounded-full shadow-xl cursor-pointer transform transition duration-100 hover:scale-110 hover:bg-pink-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"

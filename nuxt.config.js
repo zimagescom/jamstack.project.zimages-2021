@@ -6,7 +6,7 @@ export default {
     head: {
         title: '2021 pas de Game Over, juste du fun et du bonheur !',
         meta: [{
-                charset: 'utf-8'
+                charset: 'UTF-8'
             },
             {
                 name: 'viewport',
