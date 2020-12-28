@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div style="width:104%; left:auto;"
+            class="pointer-events-none hidden md:flex md:justify-center md:items-center absolute inset-0 w-full h-full">
+            <BackgroundPattern class="text-white" />
+        </div>
         <h1 sr-only="2021 pas de Game Over, juste du Fun et du Bonheur ! • Jeu concours 2021 by Zimages"></h1>
         <Game />
     </div>
