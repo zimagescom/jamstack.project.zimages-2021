@@ -25,11 +25,11 @@
                 <input type="text" name="record" id="record"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
-            <!-- <div>
+            <div>
                 <label class="text-sm ml-2" for="score">Photo de mon super giga méga score</label>
                 <input ref="file" type="file" name="score" id="score" @change="addFile()"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
-            </div> -->
+            </div>
             <div>
                 <input type="checkbox" name="accept_terms" id="accept_terms" required
                     class="shadow border-none form-checkbox text-xl mr-2 bg-white focus:shadow-outline-pink focus:border-pink" />
