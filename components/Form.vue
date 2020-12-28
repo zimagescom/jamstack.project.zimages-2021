@@ -26,7 +26,7 @@
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
-                <label class="text-sm ml-2" for="score">Photo de mon super giga méga score</label>
+                <label class="text-sm ml-2" for="score">Capture d'écran de mon super giga méga score</label>
                 <input ref="file" type="file" name="score" id="score" @change="addFile()"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
