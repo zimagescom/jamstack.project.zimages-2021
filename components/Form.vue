@@ -21,8 +21,8 @@
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
-                <label class="text-sm ml-2" for="score_text">Mon super giga méga score</label>
-                <input type="text" name="score_text" id="score_text"
+                <label class="text-sm ml-2" for="record">Mon super giga méga score</label>
+                <input type="text" name="record" id="record"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
