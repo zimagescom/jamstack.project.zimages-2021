@@ -6,74 +6,63 @@
 </template>
 
 <script>
-// Test on: https://cards-dev.twitter.com/validator
-// Test on: https://developers.facebook.com/tools/debug/
 export default {
-    data() {
-        return {
-            title: "2021 pas de Game Over, juste du fun et du bonheur !",
-            description:
-                "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
-            image: require(`~/assets/images/opengraph.jpg`),
-        };
-    },
-
-    head() {
-        return {
-            meta: [
-                {
-                    hid: "twitter:title",
-                    name: "twitter:title",
-                    content:
-                        "2021 pas de Game Over, juste du fun et du bonheur !",
-                },
-                {
-                    hid: "twitter:description",
-                    name: "twitter:description",
-                    content:
-                        "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
-                },
-                {
-                    hid: "twitter:image",
-                    name: "twitter:image",
-                    content: require(`~/assets/images/opengraph.jpg`),
-                },
-                {
-                    hid: "twitter:image:alt",
-                    name: "twitter:image:alt",
-                    content:
-                        "2021 pas de Game Over, juste du fun et du bonheur !",
-                },
-                {
-                    hid: "og:title",
-                    property: "og:title",
-                    content:
-                        "2021 pas de Game Over, juste du fun et du bonheur !",
-                },
-                {
-                    hid: "og:description",
-                    property: "og:description",
-                    content:
-                        "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
-                },
-                {
-                    hid: "og:image",
-                    property: "og:image",
-                    content: require(`~/assets/images/opengraph.jpg`),
-                },
-                {
-                    hid: "og:image:secure_url",
-                    property: "og:image:secure_url",
-                    content: require(`~/assets/images/opengraph.jpg`),
-                },
-                {
-                    hid: "og:image:alt",
-                    property: "og:image:alt",
-                    content:
-                        "2021 pas de Game Over, juste du fun et du bonheur !",
-                },
-            ],
-        };
-    },
+    data: () => ({
+        title: "2021 pas de Game Over, juste du fun et du bonheur !",
+        description:
+            "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
+        image: require(`~/assets/images/opengraph.jpg`),
+    }),
+    head: () => ({
+        meta: [
+            {
+                hid: "twitter:title",
+                name: "twitter:title",
+                content: "2021 pas de Game Over, juste du fun et du bonheur !",
+            },
+            {
+                hid: "twitter:description",
+                name: "twitter:description",
+                content:
+                    "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
+            },
+            {
+                hid: "twitter:image",
+                name: "twitter:image",
+                content: require(`~/assets/images/opengraph.jpg`),
+            },
+            {
+                hid: "twitter:image:alt",
+                name: "twitter:image:alt",
+                content: "2021 pas de Game Over, juste du fun et du bonheur !",
+            },
+            {
+                hid: "og:title",
+                property: "og:title",
+                content: "2021 pas de Game Over, juste du fun et du bonheur !",
+            },
+            {
+                hid: "og:description",
+                property: "og:description",
+                content:
+                    "Cette année à vous de jouer ! Participez à notre concours en ligne et tentez de gagner Ze borne d’arcade ZIMAGES 🎮🕹️👾",
+            },
+            {
+                hid: "og:image",
+                property: "og:image",
+                content: require(`~/assets/images/opengraph.jpg`),
+            },
+            {
+                hid: "og:image:secure_url",
+                property: "og:image:secure_url",
+                content: require(`~/assets/images/opengraph.jpg`),
+            },
+            {
+                hid: "og:image:alt",
+                property: "og:image:alt",
+                content: "2021 pas de Game Over, juste du fun et du bonheur !",
+            },
+        ],
+    }),
 };
 </script>

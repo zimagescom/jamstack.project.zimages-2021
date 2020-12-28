@@ -1,7 +1,14 @@
 <template>
-    <div class="game-wrapper relative flex justify-center items-center m-auto bg-white shadow-2xl p-2 my-8 overflow-hidden">
-        <vue-iframe class="w-full h-full" :src="src" frame-id="flappy-bird" @load="onLoad" name="flappy-bird"
-            width="100%" height="100%" />
+    <div>
+        <div
+            class="game-wrapper relative flex flex-col justify-center items-center m-auto bg-white shadow-2xl p-2 my-6 overflow-hidden">
+            <vue-iframe ref="game" class="w-full h-full" :src="src" frame-id="flappy-bird" @load="onLoad"
+                name="flappy-bird" width="100%" height="100%" />
+        </div>
+        <button @click="showForm=true" class="flex mx-auto rounded-full mt-4 px-32 py-8 uppercase bg-purple font-bold text-xl shadow-md transition duration-100 hover:bg-purple-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink" type="button">
+            Envoyer mon score
+        </button>
+        <Modal :content="'form'" v-if="showForm" @close="showForm = false" />
     </div>
 </template>
 
@@ -11,6 +18,7 @@ export default {
     data: () => ({
         src: "https://zimagescom.github.io/clumsy-bird/",
         iframe: null,
+        showForm: false,
     }),
     methods: {
         onLoad(frame) {

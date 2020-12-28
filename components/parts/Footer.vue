@@ -25,10 +25,8 @@
 
 <script>
 export default {
-    data() {
-        return {
-            showTerms: false,
-        };
-    },
+    data: () => ({
+        showTerms: false,
+    }),
 };
 </script>

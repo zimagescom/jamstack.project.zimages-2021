@@ -34,14 +34,15 @@ export default {
     css: [],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-    plugins: [{
+    plugins: [
+        {
             src: '~/plugins/vue-iframes',
             mode: 'client'
         },
         // {
-        //     src: '~/plugins/ga.js',
+        //     src: '~/plugins/vue-html2canvas',
         //     mode: 'client'
-        // }
+        // },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)

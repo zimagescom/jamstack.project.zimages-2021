@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-evenly items-center flex-col space-y-10 md:space-y-0 md:flex-row w-full">
+    <div class=" flex justify-evenly items-center flex-col space-y-10 md:space-y-0 md:flex-row w-full">
         <div class="flex items-start space-x-4 leading-5">
             <Logo class="w-8 mt-3" />
             <div class="transform -rotate-2">
@@ -39,10 +39,8 @@
 
 <script>
 export default {
-    data() {
-        return {
-            showForm: false,
-        };
-    },
+    data: () => ({
+        showForm: false,
+    }),
 };
 </script>
