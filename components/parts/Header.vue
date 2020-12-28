@@ -1,12 +1,12 @@
 <template>
-    <div class=" flex justify-evenly items-center flex-col space-y-10 md:space-y-0 md:flex-row w-full">
+    <div class=" flex justify-evenly items-center flex-col flex-wrap space-x-4 space-y-10 md:space-y-0 md:flex-row w-full">
         <div class="flex items-start space-x-4 leading-5">
             <Logo class="w-8 mt-3" />
             <div class="transform -rotate-2">
                 <span class="font-bold">Cette année, à vous de jouer !</span> <br />
                 <span class="font-light">Participer à notre jeu concours <br />
                     en ligne et tentez de gagner</span>
-                <div class="ml-10 mt-3 bg-white font-bold text-purple-800 px-4 py-1 transform -rotate-2">
+                <div class="md:ml-10 mt-3 bg-white font-bold text-purple-800 px-4 py-1 transform -rotate-2">
                     Ze Borne d'arcade
                     <a class="focus:outline-none focus:shadow-outline-pink" href="https://zimages.fr" title="Zimages"
                         target="_blank">ZIMAGES</a>

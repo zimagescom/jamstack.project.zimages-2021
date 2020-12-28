@@ -7,7 +7,7 @@
             Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
         </div>
 
-        <form name="jeu-concours" action="/merci" netlify netlify-honeypot="bot-field"
+        <form name="jeu-concours" action="/merci/" netlify netlify-honeypot="bot-field"
             enctype="multipart/form-data" class="max-w-3xl m-auto flex flex-col space-y-6">
             <input type="hidden" name="form-name" value="jeu-concours" />
             <div>
