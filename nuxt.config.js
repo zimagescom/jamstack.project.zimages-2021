@@ -28,6 +28,13 @@ export default {
                 href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'
             }
         ],
+        script: [
+            {
+                hid: "kwes",
+                src: "https://kwes.io/v2/kwes-script.js",
+                defer: true
+            }
+        ]
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)

@@ -4830,6 +4830,11 @@ koa@^2.12.0:
     type-is "^1.6.16"
     vary "^1.1.2"
 
+kwesforms@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/kwesforms/-/kwesforms-2.0.4.tgz#2a57cf4d470633116b68eba22ba7d951b2a2e425"
+  integrity sha512-DY3D2lwI5LNYfSmlfqXxRpAF4+AuUlZVXVE1Vd1aqMWjKNQRUkppQLdo8k2pkAYr9jYysfe8lhHrHmIBjrGAEg==
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
