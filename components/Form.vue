@@ -14,12 +14,12 @@
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
-                <label class="text-sm ml-2" for="email">Adresse e-mail *</label>
+                <label class="text-sm ml-2" for="email" required>Adresse e-mail *</label>
                 <input type="email" name="email" id="email"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
             <div>
-                <label class="text-sm ml-2" for="record">Mon super giga méga score *</label>
+                <label class="text-sm ml-2" for="record" required>Mon super giga méga score *</label>
                 <input type="number" min="0" name="record" id="record"
                     class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
             </div>
