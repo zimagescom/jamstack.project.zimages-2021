@@ -27,13 +27,6 @@ export default {
                 rel: 'stylesheet',
                 href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'
             }
-        ],
-        script: [
-            {
-                hid: "kwes",
-                src: "https://kwes.io/v2/kwes-script.js",
-                defer: true
-            }
         ]
     },
 
@@ -45,11 +38,7 @@ export default {
         {
             src: '~/plugins/vue-iframes',
             mode: 'client'
-        },
-        // {
-        //     src: '~/plugins/vue-html2canvas',
-        //     mode: 'client'
-        // },
+        }
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
