@@ -18,7 +18,7 @@
                 <Arcade class="w-40" />
             </NuxtLink>
         </div>
-        <div class="leading-5">
+        <div class="leading-6 text-xl">
             <span class="font-light">
                 Pour participer c’est simple, <br />
                 rendez-vous sur
@@ -29,18 +29,18 @@
                 Amusez-vous et envoyez-nous <br />
                 votre plus beau score ! <br />
             </span>
-            <button @click="showForm=true"
+            <!-- <button @click="showForm=true"
                 class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink"
-                type="button">Envoyer mon score</button>
+                type="button">Envoyer mon score</button> -->
         </div>
-        <Modal :content="'form'" v-if="showForm" @close="showForm = false" />
+        <!-- <Modal :content="'form'" v-if="showForm" @close="showForm = false" /> -->
     </div>
 </template>
 
 <script>
-export default {
-    data: () => ({
-        showForm: false,
-    }),
-};
+// export default {
+//     data: () => ({
+//         showForm: false,
+//     }),
+// };
 </script>
