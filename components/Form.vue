@@ -63,11 +63,11 @@ export default {
     },
     methods: {
         submit() {
+            this.$router.push({
+                path: "/",
+                params: { score: this.record },
+            });
             (this.merci = true), (this.score = this.record);
-            // this.$router.push({
-            //     name: "merci",
-            //     params: { score: this.record },
-            // });
         },
     },
 
