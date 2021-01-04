@@ -79,19 +79,24 @@ export default {
                 .join("&");
         },
         submit() {
-            const axiosConfig = {
-                header: { "Content-Type": "application/x-www-form-urlencoded" },
-            };
-            axios
-                .post(
-                    "/",
-                    this.encode({
-                        "form-name": "voeux-zimages-2021",
-                    }),
-                    axiosConfig
-                )
-                .then(() => {});
             (this.merci = true), (this.score = this.the_record);
+
+            setTimeout(() => {
+                const axiosConfig = {
+                    header: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                };
+                axios
+                    .post(
+                        "/",
+                        this.encode({
+                            "form-name": "voeux-zimages-2021",
+                        }),
+                        axiosConfig
+                    )
+                    .then(() => {});
+            }, 1000);
         },
     },
     mounted() {
