@@ -6,8 +6,8 @@
 </head>
 
 <body {{ BODY_ATTRS }}>
-    <form hidden name="voeux-zimages-2021" method="post" action="/merci" data-netlify="true" data-netlify-honeypot="bot-field"
-        class="hidden max-w-3xl m-auto flex flex-col space-y-6">
+    <form hidden name="voeux-zimages-2021" method="post" action="/merci" data-netlify="true"
+        data-netlify-honeypot="bot-field" class="hidden max-w-3xl m-auto flex flex-col space-y-6">
         <input type="hidden" name="form-name" value="voeux-zimages-2021" />
         <div>
             <label class="text-sm ml-2" for="name">Prénom et Nom *</label>
@@ -24,10 +24,11 @@
             <input type="number" min="0" name="record" id="record"
                 class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
         </div>
-        <!-- <div>
-        <label class="text-sm ml-2" for="score">Capture d'écran de mon super giga méga score</label>
-        <input ref="file" type="file" name="score" id="score" class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
-    </div> -->
+        <div>
+            <label class="text-sm ml-2" for="score">Capture d'écran de mon super giga méga score</label>
+            <input ref="file" type="file" name="score" id="score"
+                class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
+        </div>
         <div>
             <input type="checkbox" name="accept_terms" id="accept_terms" required
                 class="shadow border-none form-checkbox text-xl mr-2 bg-white focus:shadow-outline-pink focus:border-pink" />
