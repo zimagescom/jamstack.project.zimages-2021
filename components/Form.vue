@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <label class="text-sm ml-2" for="record" required>Mon super giga méga score *</label>
-                    <input v-model="record" type="number" min="0" name="record" id="record"
+                    <input v-model="the_record" type="number" min="0" name="record" id="record"
                         class="shadow border-none form-input block rounded-full focus:shadow-outline-pink focus:border-pink" />
                 </div>
                 <div>
@@ -62,12 +62,29 @@ export default {
         };
     },
     methods: {
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    (key) =>
+                        encodeURIComponent(key) +
+                        "=" +
+                        encodeURIComponent(data[key])
+                )
+                .join("&");
+        },
         submit() {
-            this.$router.push({
-                path: "/",
-                params: { score: this.record },
+            event.preventDefault();
+            fetch("/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: this.encode({
+                    "form-name": event.target.getAttribute("name"),
+                    ...name,
+                }),
             });
-            (this.merci = true), (this.score = this.record);
+            (this.merci = true), (this.score = this.the_record);
         },
     },
 
