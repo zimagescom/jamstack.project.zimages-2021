@@ -53,11 +53,15 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
+    name: "VoeuxForm",
     data() {
         return {
             merci: false,
             score: 0,
+            the_record: 0,
             text: "",
         };
     },
@@ -66,28 +70,28 @@ export default {
             return Object.keys(data)
                 .map(
                     (key) =>
-                        encodeURIComponent(key) +
-                        "=" +
-                        encodeURIComponent(data[key])
+                        `${encodeURIComponent(key)}=${encodeURIComponent(
+                            data[key]
+                        )}`
                 )
                 .join("&");
         },
         submit() {
-            event.preventDefault();
-            fetch("/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: this.encode({
-                    "form-name": event.target.getAttribute("name"),
-                    ...name,
-                }),
-            });
+            const axiosConfig = {
+                header: { "Content-Type": "application/x-www-form-urlencoded" },
+            };
+            axios
+                .post(
+                    "/",
+                    this.encode({
+                        "form-name": "voeux-zimages-2021",
+                    }),
+                    axiosConfig
+                )
+                .then(() => {});
             (this.merci = true), (this.score = this.the_record);
         },
     },
-
     mounted() {
         this.score = this.$route.params.score;
         if (this.score > 90) {
