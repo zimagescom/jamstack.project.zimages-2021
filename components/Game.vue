@@ -5,11 +5,11 @@
             <vue-iframe class="w-full h-full" ref="game" :src="src" frame-id="flappy-bird" @load="onLoad" name="flappy-bird" />
         </div>
         <button @click="showForm=true"
-            class="flex mx-auto rounded-full mt-4 px-16 py-4 uppercase bg-purple font-bold text-xl shadow-md transition duration-100 hover:bg-purple-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink"
+            class="hidden md:flex mx-auto rounded-full mt-4 px-16 py-4 uppercase bg-purple font-bold text-xl shadow-md transition duration-100 hover:bg-purple-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink"
             type="button">
             Envoyer mon score
         </button>
-        <Modal :content="'form'" v-if="showForm" @close="showForm = false" />
+        <Modal class="hidden md:flex" :content="'form'" v-if="showForm" @close="showForm = false" />
     </div>
 </template>
 
