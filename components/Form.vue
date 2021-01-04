@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-6xl m-auto text-black bg-gray-300 p-6 rounded-3xl shadow">
         <div v-if="merci">
-            <div class="text-center text-4xl text-pink-600 font-medium">Whaaaooouuu, <strong>{{ score }}</strong> mais
+            <div class="text-center text-4xl text-pink-600 font-medium">Whaaaooouuu, <strong>{{ the_record }}</strong> mais
                 quel score !! </div>
             <div v-text="text" class="text-center text-2xl text-gray-600">Merci de votre participation !</div>
             <div class="mt-10 text-center text-sm text-gray-600">La Team ZIMAGES 💙</div>
