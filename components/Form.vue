@@ -13,7 +13,7 @@
                     class="bg-pink-100 text-pink-400 rounded-full px-3 py-1">1ère borne arcade ZIMAGES</span> ! <br />
                 Merci de remplir ce formulaire ci-dessous nous permettant de récolter ton score de ouf !
             </div>
-            <form name="voeux-zimages-2021" method="post" action="/" data-netlify="true"
+            <form @submit.prevent="submit" name="voeux-zimages-2021" method="post" action="/" data-netlify="true"
                 data-netlify-honeypot="bot-field" class="max-w-3xl m-auto flex flex-col space-y-6">
                 <input type="hidden" name="form-name" value="voeux-zimages-2021" />
                 <div>
@@ -44,7 +44,6 @@
                 </div>
                 <div>
                     <button
-                    @click="merci=true"
                     type="submit"
                     class="rounded-full mt-4 px-10 py-3 uppercase bg-pink font-bold text-xl text-white shadow-md transition duration-100 hover:bg-pink-600 hover:shadow-lg focus:outline-none focus:shadow-outline-pink">Envoyer</button>
                 </div>
@@ -68,35 +67,8 @@ export default {
         };
     },
     methods: {
-        encode(data) {
-            return Object.keys(data)
-                .map(
-                    (key) =>
-                        `${encodeURIComponent(key)}=${encodeURIComponent(
-                            data[key]
-                        )}`
-                )
-                .join("&");
-        },
         submit() {
-            (this.merci = true), (this.score = this.the_record);
-
-            setTimeout(() => {
-                const axiosConfig = {
-                    header: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                };
-                axios
-                    .post(
-                        "/",
-                        this.encode({
-                            "form-name": "voeux-zimages-2021",
-                        }),
-                        axiosConfig
-                    )
-                    .then(() => {});
-            }, 1000);
+            this.merci = true;
         },
     },
     mounted() {
