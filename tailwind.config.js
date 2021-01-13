@@ -57,7 +57,8 @@ module.exports = {
     variants: {},
     plugins: [
         require('tailwindcss-filters'),
-        require('@tailwindcss/custom-forms')
+        require('@tailwindcss/custom-forms'),
+        require('@tailwindcss/typography')
     ],
     purge: {
         enabled: process.env.NODE_ENV === 'production',
